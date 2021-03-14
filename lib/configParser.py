@@ -1,20 +1,28 @@
-import os
-
-from dotenv import load_dotenv
 from tinydb import TinyDB, Query
+import asyncio
 
 class cfg:
-    def __init__(self):
-        load_dotenv()
-        self.RiotToken = os.getenv("RiotToken")
-        self.CDB = TinyDB('./db/config.json')
-        self.query = Query()
+    def __init__(self, db:str):
+        self.Tournamentdb   = TinyDB(db)
+        self.player_list    = self.Tournamentdb.table('player_list')
+        self.bracket_list   = self.Tournamentdb.table('bracket_list')
+        self.query          = Query()
 
-    def get(self,key:str):
-        return self.CDB.search(self.query.key == key)
 
-    def set(self,key:str,value:str): # ill first try checking if the value exist to use update if it does.
-        if str(self.CDB.search(self.query.key == key)) == "[]": # assume its a new value
-            self.CDB.insert({'key':key,'value':value}) # using insert to add the new value.
+    async def get_player(self):  
+        return
+    
+    async def set_bracket(self):  
+        return
+
+    async def set_player(self, player:str, rank:str, tournament:str):
+        if str(self.player_list.search(self.query.player == player)) == '[]':
+            self.player_list.insert({'player': player,'rank': rank, 'tournament': tournament})
+            return True
         else:
-            MySQL.execute("UPDATE config SET Value = '{}' where CKey = '{}';".format(value,key),log,read,True) # updating it.
+            return False
+
+Main = cfg('Luki.json')
+asyncio.run(Main.set_player('Lominex', 'Gold 3', 'LukiTurnier'))
+asyncio.run(Main.set_player('Syncx', 'Gold 3', 'LukiTurnier'))
+asyncio.run(Main.set_player('ZeroTwo', 'Gold 3', 'LukiTurnier'))
