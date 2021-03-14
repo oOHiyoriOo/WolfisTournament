@@ -6,3 +6,4 @@ Tournament bot for league og legends. simple  and free to use.
 - Tournament.py => Main entry point.
 - Readme.md => we need to doc our progress and how to use.
 - LICENSE => MIT, use it and have fun.
+- rewuirements.txt => Modules needed to run the bot.
