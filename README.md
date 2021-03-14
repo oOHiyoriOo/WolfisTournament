@@ -38,3 +38,16 @@ Tournament bot for league og legends. simple  and free to use.
     - anfragen
     - welche api's
 
+
+
+
+DB.json
+
+'player_list':   [
+                    {
+                        'player': 'NAME'
+                        'rank'  : 'RANK'
+                        'platz' : 'PLATZ' 
+                    }
+
+                ]
