@@ -12,20 +12,28 @@ Tournament bot for league og legends. simple  and free to use.
 
 
 # Tasks
+
+### Lomix
+#### https://tinydb.readthedocs.io/en/latest/index.html
 - config
     - finish config.
     - config shema.
 
+### Syncx
+#### https://discordpy.readthedocs.io/en/latest/api.html
 - basic discord bot.
     - Welche commands?
     - Datendarstellung.
     - reactions?
+
 
 - Discord Bot / Config
     - Permissions.
         - wer darf erstellen.
         - wer ändern.
 
+### ZéroTwó#5019
+#### https://developer.riotgames.com/apis 
 - Riot Api
     - anfragen
     - welche api's
