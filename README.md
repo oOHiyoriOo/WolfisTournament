@@ -47,7 +47,7 @@ DB.json
                     {
                         'player': 'NAME'
                         'rank'  : 'RANK'
-                        'platz' : 'PLATZ' 
+                        'tournament' : 'TOURNAMENT' 
                     }
 
                 ]
