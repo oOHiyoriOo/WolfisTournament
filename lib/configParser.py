@@ -2,6 +2,9 @@ from tinydb import TinyDB, Query
 from datetime import datetime
 import asyncio
 
+import os
+from dotenv import load_dotenv
+
 class cfg:
     def __init__(self):
         self.Playerdb       = TinyDB('player.json')
@@ -9,6 +12,7 @@ class cfg:
         self.player_list    = self.Playerdb.table('player_list')
         self.bracket_list   = self.Playerdb.table('bracket_list')
         self.query          = Query()
+        self.RiotToken = os.getenv("RiotToken")
 
     async def generate_tournament(self, tournament:str, start:datetime):
         if(TinyDB(tournament+'.json').tables == []):
