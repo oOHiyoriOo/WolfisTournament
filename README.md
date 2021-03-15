@@ -41,13 +41,32 @@ Tournament bot for league og legends. simple  and free to use.
 
 
 
-DB.json
+player.json
 
 'player_list':   [
                     {
-                        'player': 'NAME'
-                        'rank'  : 'RANK'
-                        'tournament' : 'TOURNAMENT' 
+                        'player': 'NAME',
+                        'rank'  : 'RANK',
+                        'tournament' : 'TOURNAMENT'    # can hold multiple tournaments
                     }
 
+                ]
+
+# tournament.json will be deleted after the Tournament is over and the bot postest an embed with the winner
+tournament.json                                         #Tournament will be replaced by the tournament name to differentiate beetween multiple tournaments.
+
+'config':       [
+                    {
+                        'startTime': 'TIMESTAMP',
+                        'winner': 'PLAYER'
+                    }
+                ]
+
+'brackets':     [
+                    {
+                        'round': 'ROUND',
+                        'player1': 'PLAYER',
+                        'player2': 'PLAYER',
+                        'winner': 'PLAYER'
+                    }
                 ]
